@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './Help.css';
-import { FaAngleDown, FaAngleUp, FaPiggyBank, FaPlus, FaMinus, FaAmericanSignLanguageInterpreting} from 'react-icons/fa';
+import { FaPlus, FaMinus,} from 'react-icons/fa';
 import ToggleButton from "./ToggleButton"
 import FinancialAid from "../images/Financial Aid.jpeg"
 import Grades from "../images/Grades.jpeg"
 import Schedule from "../images/Schedule.png"
 import Schools from "../images/Schools.png"
 import TransferCredits from "../images/TransferCredits.png"
-import International from "../images/International.jpeg"
+
 import InternationalServices from "../images/InternationalServices.jpeg"
 
 function Help() {
@@ -78,7 +78,7 @@ function Help() {
 const data = [
    {
        category: "Financial Aid",
-       icon: () => <img src={FinancialAid} className='accorion_imgs'/>,
+       icon: () => <img src={FinancialAid} className='accorion_imgs' alt=''/>,
        subcategory: [
            { name: "Fafsa", 
            info: (
@@ -149,7 +149,7 @@ const data = [
    },
    {
        category: "Grades",
-       icon: () => <img src={Grades} className='accorion_imgs'/>,
+       icon: () => <img src={Grades} className='accorion_imgs' alt=''/>,
        subcategory: [
            {  
                name: "Grades Not Submitted",
@@ -202,7 +202,7 @@ const data = [
    },
    {
        category: "Schedule",
-       icon: () => <img src={Schedule} className='accorion_imgs'/>,
+       icon: () => <img src={Schedule} className='accorion_imgs' alt=''/>,
        subcategory: [
            {name: "Enrollment Times", 
            info: 
@@ -298,7 +298,7 @@ const data = [
    },
    {
     category: "Schools",
-    icon: () => <img src={Schools} className='accorion_imgs'/>,
+    icon: () => <img src={Schools} className='accorion_imgs' alt=''/>,
         subcategory: [
           {
             name: "Zicklin School of Business",
@@ -412,7 +412,7 @@ const data = [
   },
   {
     category: "Transfer",
-    icon: () => <img src={TransferCredits} className='accorion_imgs'/>,
+    icon: () => <img src={TransferCredits} className='accorion_imgs' alt=''/>,
     subcategory: [
       {
       name: "Transfer Credits",
@@ -477,7 +477,7 @@ const data = [
   },
   {
     category: "International Students",
-    icon: () => <img src={InternationalServices} className='accorion_imgs'/>,
+    icon: () => <img src={InternationalServices} className='accorion_imgs' alt=''/>,
     subcategory: [
       {
         name: "Application Process Details",

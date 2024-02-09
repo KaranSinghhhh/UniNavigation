@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import FoodLocationItems from "./FoodLocationItems";
 import "./FoodLocations.css";
 
-import DiDiDumpling from "../images/DidiDumpling.png";
 import TacosTimeSquare from "../images/TacosTimeSquare.jpeg";
 import BurpBowlCafe from "../images/BurpBowlCafe.jpeg";
 import SunFlowerGramercy from "../images/SunFlowerGramercy.jpeg";
-import SarabethsRestaurants from "../images/SarabethsRestaurants.jpeg";
 import BagelsAndSchmear from "../images/BagelsAndSchmear.jpeg";
 import LittleBasil from "../images/LittleBasil.jpeg";
 import SurrealCremeary from "../images/SurrealCreamery.jpeg";

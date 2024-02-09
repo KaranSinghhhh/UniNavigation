@@ -14,7 +14,7 @@ function LearnMore() {
 
                 <h1>Coming Soon...</h1>
                 <p>An AI chatbot that can answer your questions and will soon be replaing the Help page. </p>
-                <h4></h4>
+                
                 {/* You can replace the above paragraph with your actual content */}
             </div>
         </div>
