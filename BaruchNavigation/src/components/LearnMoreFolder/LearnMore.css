@@ -1,0 +1,32 @@
+.learn-more-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 2rem;
+    background-color: #f0f2f5; /* A light grey background */
+    color: #333; /* Dark grey text color for contrast */
+    font-family: 'Arial', sans-serif; /* A clean, modern font */
+}
+
+.learn-more-title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem; /* A large, readable title size */
+    color: #007bff; /* A blue color for the title for a pop of color */
+}
+
+.learn-more-content {
+    max-width: 800px; /* Maximum width of content for readability */
+    margin: auto;
+    background-color: #fff; /* White background for the content area */
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Slightly rounded corners for a modern feel */
+    line-height: 1.6; /* Spacing out lines for readability */
+}
+
+/* If you plan to have more paragraphs or content, you might add more styles */
+.learn-more-content p {
+    margin-bottom: 1rem; /* Space out paragraphs */
+}

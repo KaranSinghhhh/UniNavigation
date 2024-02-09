@@ -1,0 +1,468 @@
+.cards {
+  padding: 4rem;
+  background: #fff;
+ }
+ h1 {
+  text-align: center;
+ }
+ .cards__container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+ 
+ 
+  position:relative;
+ }
+ .cards__wrapper {
+  position: relative;
+  margin: 50px 0 45px;
+ }
+ .cards__items {
+  margin-bottom: 24px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 24px;
+  width: 100%;
+  margin-bottom: 24px;
+  }
+ .cards__item {
+  display: flex;
+  flex: 1;
+  border-radius: 10px;
+  /*margin: 0 1rem;*/
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  overflow: hidden;
+ 
+ 
+   }
+   .cards__item__link {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+   
+   
+  }
+ 
+ 
+ .cards__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 70%;
+  overflow: hidden;
+ }
+ 
+ 
+ .fade-img {
+  animation-name: fade-img;
+  animation-duration: 2s;
+ }
+ .cards__item__pic-wrap::after {
+  content: attr(data-category);
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  padding: 6px 8px;
+  max-width: calc((100%) - 60px);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #1f98f4;
+  box-sizing: border-box;
+ }
+ .cards__item__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear;
+  object-fit: cover;
+ }
+ .cards__item__img:hover {
+  transform: scale(1.1);
+ }
+ .cards__item__info {
+  padding: 18px 18px 18px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30%;
+ 
+ 
+  overflow: hidden;
+ }
+ 
+ 
+ .cards__item__text, .cards__item__link {
+  word-break: break-word; /* This will break long words to prevent overflow */
+  overflow: hidden; /* Combine with text-overflow for ellipsis */
+  text-overflow: ellipsis; /* This will add ellipsis at the end of the overflowing content */
+ }
+ .cards__item__text {
+  color: black;
+   font-size: 18px;
+  line-height: 24px;
+ }
+ @media only screen and (max-width: 1024px) {
+  .cards__item {
+    margin-bottom: 2rem;
+    grid-template-columns: 1fr;
+   
+   
+  }
+
+ 
+ 
+ 
+ }
+ 
+ 
+ @media only screen and (min-width: 1024px) {
+  .cards__item__pic-wrap {
+    padding-top: 70%; /* Adjust this percentage to change the image height on larger screens */
+  }
+ 
+ 
+  .cards__item__info {
+    padding: 18px 18px 18px;
+   }
+  
+  .cards__items {
+    grid-template-columns: repeat(2, 1fr); /* Only two cards per row */
+  }
+ 
+ }
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ /* Base styles for the card */
+ .cards_item {
+  perspective: 1000px; /* Provides 3D space for flip effect */
+  }
+ 
+ 
+ .card-content {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s; /* Adjust time as needed */
+  
+ 
+ 
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+ /* Back of the card */
+ /*
+ .card-back {
+  visibility: hidden;
+  transform: rotateY(180deg); 
+
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg); 
+  top: 0;
+  left: 0;
+  display: none; 
+  background-color: #003366;
+  display: flex;
+  justify-content: center; 
+  color: white; 
+  text-align: center; 
+  padding: 20px; 
+  font-size: 16px; 
+  border-radius: 10px;
+  border-color: #1f98f4;
+  }
+  */
+ 
+  /* Optionally, add styles for any buttons or specific elements */
+  
+  /*
+  .card-back {
+    visibility: hidden;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c3e50; 
+    color: #ecf0f1;
+    padding: 30px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    text-align: left; 
+    font-size: 14px; 
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25); 
+    border: 1px solid #34495e; 
+    overflow: hidden; 
+  }
+  
+  .card-back h3 {
+    font-size: 24px; 
+    color: #ecf0f1; 
+    border-bottom: 2px solid #3498db; 
+  }
+  
+  .card-back a {
+    color: #3498db; 
+    text-decoration: none; 
+    transition: color 0.3s;
+    
+  }
+  
+  .card-back a:hover {
+    color: #ecf0f1; 
+    text-decoration: underline; 
+  }
+  
+  .card-back p {
+    color: #bdc3c7; 
+    line-height: 1.4; 
+    margin-bottom: 5px; 
+  
+    font-size: 14px; 
+
+  }
+  
+
+  .card-back-content {
+    width: 100%;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px; 
+    
+    overflow-y: auto; 
+    padding: 15px;
+    max-height: 100%; 
+
+    
+  
+  }
+
+ 
+
+  .card-back-content::-webkit-scrollbar {
+    display: none;
+  }
+  
+ 
+  .contact-info {
+    font-weight: bold;
+    color: #ecf0f1;
+  }
+  
+ 
+  
+ 
+ 
+  .card-front, .card-back {
+ 
+  flex-grow: 1;
+ }
+ 
+ */
+
+ .card-back {
+  visibility: hidden;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start for a cleaner layout */
+  
+  justify-content: space-between;
+  
+  background-color: #f8f9fa; /* Light grey background for a modern look */
+  color: #212529; /* Dark grey text for contrast */
+  padding: 20px;
+  font-family: 'Roboto', sans-serif; /* Modern, sans-serif font */
+  text-align: left;
+  font-size: 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Lighter shadow for subtle depth */
+  border: 1px solid #e0e0e0; /* Light grey border for a soft outline */
+  transition: transform 0.6s, visibility 0.6s ease-in-out; /* Smooth transition for flipping effect */
+  overflow: hidden;
+}
+
+.card-back h3 {
+  font-size: 20px;
+  color: #212529;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #007bff; /* Bootstrap primary color for consistency */
+}
+
+.card-back a {
+  color: #007bff; /* Bootstrap primary color for links */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.card-back a:hover {
+  color: #0056b3; /* A darker shade of the primary color for hover state */
+  text-decoration: underline;
+}
+
+.card-back p {
+  color: #6c757d; /* Bootstrap secondary text color for better readability */
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.card-back-content {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding: 20px;
+  max-height: 100%;
+}
+
+.card-back-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.card-back-content::-webkit-scrollbar-thumb {
+  background-color: #007bff; /* Scrollbar color */
+  border-radius: 10px;
+}
+
+.contact-info {
+  font-weight: 600; /* Slightly bolder font for contact information */
+  color: #212529; /* Use the same color as the primary text for consistency */
+}
+
+/* Adjustments for spacing and layout */
+.cards__item__info {
+  padding: 20px; /* Consistent padding around the card */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between elements */
+}
+
+/* Add hover effect on the entire card for interactivity */
+.cards__item:hover .card-content {
+  transform: rotateY(180deg);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Deeper shadow on hover */
+}
+
+/* Ensure the back content is visible when the card is flipped */
+.flipped .card-back {
+  visibility: visible;
+}
+
+.flipped .card-front {
+  visibility: hidden;
+}
+
+
+ 
+ 
+ 
+ /* Styles when the card is flipped */
+ .flipped .card-content {
+  transform: rotateY(180deg);
+ }
+ 
+ .flipped .card-back {
+  visibility: visible;
+ }
+ 
+ .flipped .card-front {
+  visibility: hidden;
+ }
+ 
+ 
+/*Content of back card*/
+
+/*
+.card-back-content {
+  font-size: 0.9em; 
+  color: #fff; 
+  padding: 20px; 
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  text-align: center; 
+}
+
+.card-back-content h3 {
+  margin-bottom: 10px; 
+  font-size: 1.2em; 
+  color: white;
+}
+
+.card-back-content a{
+  color:#1f98f4;
+}
+
+.card-back-content p {
+  font-size: 0.8em; 
+  margin-bottom: 5px; 
+*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,14 @@
+.toggle-button {
+    display: block;        /* Makes the button a block element */
+    margin: 0 auto; /* Auto margin on both sides to center horizontally */
+    /* Additional styling for the button (optional) */
+    padding: 0px 0px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background: none;
+    color: darkgrey;
+}
+
+

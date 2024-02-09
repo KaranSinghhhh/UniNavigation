@@ -1,0 +1,13 @@
+.card-flip-button {
+  position: relative;
+  top: 25px;
+  right: -10px;
+  
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color:  black;
+  z-index: 10;
+}
+

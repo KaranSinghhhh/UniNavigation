@@ -1,0 +1,172 @@
+.help__main {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .main__title {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .accordion {
+    width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #FFF;
+  }
+  
+  .item {
+    border-bottom: 1px solid #E1E4E8;
+  }
+  
+  .title {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .title h2 {
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-left: 10px;
+    flex-grow: 1;
+  }
+  
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(1,0,1,0);
+    padding-left: 15px;
+    background-color: #FAFBFC;
+  }
+  
+  .content.show {
+    max-height: 1000px; /* Large enough to show content */
+  }
+  
+  .subcategory-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 0;
+  }
+  
+  .subcategory-button {
+    background-color: #EFF3F6;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .subcategory-button:hover {
+    background-color: #E1E4E8;
+  }
+  
+  .subcategory-button.selected {
+    background-color: #D1D7DC;
+    color: white;
+  }
+  
+  .subcategory-content {
+    padding: 15px;
+    color: #555;
+    background-color: #FAFBFC;
+    
+  }
+
+  .category-icon {
+    margin-right: 10px;
+    vertical-align: middle; /* Align the icon with the text */
+    /* You can set a specific size or color if needed */
+  }
+
+  .accorion_imgs{
+    height: 50px;
+    width: 60px;
+  }
+
+  .w_grades ul{
+    list-style: none;
+  }
+
+  .w_grades li{
+    margin-left: 13px;
+  }
+
+  .toggle-content {
+    background: #f9f9f9; /* Light grey background for better contrast */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* More pronounced shadow for depth */
+    padding: 20px; /* Increased padding for better spacing */
+    margin-top: 15px; /* Adjusted margin */
+    transition: all 0.3s ease; /* Smooth transition for animations */
+    border-left: 4px solid #007bff; /* Adding a left border for style */
+}
+
+.toggle-content h5 {
+    color: #333; /* Retaining the darker color for headings */
+    font-weight: 600; /* Keeping headings bold */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+.toggle-content p, .toggle-content li {
+    color: #555; /* Slightly darker color for text */
+    font-size: 15px; /* Adjusted font size */
+    line-height: 1.7; /* Increased line height for readability */
+    font-family: 'Arial', sans-serif; /* Consistent font */
+}
+
+.toggle-content ul {
+    padding-left: 20px; /* Adding padding for bullet points */
+    list-style-type: disc; /* Using standard disc for bullets */
+}
+
+.toggle-content li::before {
+    content: ''; /* Removing the custom bullet */
+    margin-left: 0px; /* Adjusting alignment */
+}
+
+.toggle-content li:hover {
+    color: #6c63ff; /* Keeping the hover color */
+     /* Underline on hover for interactive elements */
+}
+
+.credit-overload a, .transfer-credits a {
+  color: #007bff; /* Standard link color */
+  text-decoration: none; /* No underline initially */
+}
+
+.credit-overload a:hover, .transfer-credits a:hover {
+  text-decoration: underline; /* Underline on hover for links */
+}
+
+
+
+
+
+  @media (max-width: 768px) { /* or whichever breakpoint suits your design */
+    .wrapper {
+      padding: 0 20px; /* Add horizontal padding */
+    }
+  
+    .accordion {
+       /* Change from fixed width to auto to respect the padding of the parent */
+      margin: 0; /* Remove any margin if present */
+      /* Other styles can remain unchanged */
+    }
+  }
+  

@@ -1,0 +1,8 @@
+.map-container {
+    height: 110px; /* Adjust height as needed */
+    width: 100%; /* Adjust width as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    /* Add any other styling here */
+  }
+

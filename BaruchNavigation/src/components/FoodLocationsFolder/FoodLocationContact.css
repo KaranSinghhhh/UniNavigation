@@ -1,0 +1,40 @@
+.food__accessibility__items {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between each item */
+}
+
+.food__accessibility__item {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    gap: 5px; /* Space between icon and text */
+
+    border-bottom: 1px solid #ccc; /* Adjust color and thickness as needed */
+    padding-bottom: 8px; /* Adjust spacing as needed */
+    margin-bottom: 8px; /* Space between items */
+}
+   
+.food__accessibility__text {
+    color: #252e48; /* Text color */
+    font-size: 14px; /* Font size */
+    text-decoration: none;
+    
+}
+  
+.icon-black {
+    color: #252e48!important; /* Force icon color */
+}
+
+.food__accessibility__sub__heading {
+    color: #252e48;
+    text-align: center;
+
+    border-bottom: 1px solid #ccc;
+    padding-bottom:8px;
+    margin-bottom: 8px;
+ }
+
+ .food__accessibility__item:last-child {
+    border-bottom: none;
+}
+ 
